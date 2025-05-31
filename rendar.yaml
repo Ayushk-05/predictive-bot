@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: signals-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python run_signals_with_flask.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
